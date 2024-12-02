@@ -1,0 +1,186 @@
+/* Estils globals */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+    background-color: #e8dede; /* Color de fons */
+}
+
+h1, h2, h3 {
+    color: #463535; /* Color del text dels títols */
+    text-align: center;
+    
+}
+
+p {
+    margin: 0 0 15px;
+    color: #555;
+}
+
+/* Contenidor principal per centrar el contingut */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estils del menú de navegació */
+nav {
+    background: #D3C3E9; /* Blau del menú */
+    color: #8293A4;
+    padding: 20px 0;
+    font-family: 'Roboto', sans-serif;
+
+    
+
+
+    
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Centrar els elements del menú */
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #8293A4;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffd700; /* Color daurat quan passem el cursor */
+}
+
+/* Estils per al peu de pàgina */
+footer {
+    background: #D3C3E9;
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    margin-top: 10px;
+    font-family: 'Pacifico', cursive;
+    
+}
+
+/* Estils de la pàgina d'inici */
+.hero {
+    background-image: url('/images/barcelona.jpg'); /* Canviar per la ruta real */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 40px 10px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-family: 'Pacifico', cursive;
+
+}
+
+.hero p {
+    
+        font-family: 'Roboto', sans-serif;
+        font-size: 1rem; /* Ajusta según tu diseño */
+        line-height: 1.6; /* Mejora la legibilidad */
+        color: #333; /* Color neutro para facilitar la lectura */
+    
+    
+    
+}
+
+/* Contenidor amb Flexbox */
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Per assegurar que els elements s'ajustin */
+    gap: 20px;
+}
+
+/* Estils per a les cartes de monuments */
+.card {
+    background: #d7d0c4;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(33% - 20px); /* Ample automàtic segons 3 columnes */
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card h3 {
+    padding: 10px;
+    margin: 0;
+}
+
+.card p {
+    padding: 10px;
+    
+        font-family: 'Roboto', sans-serif;
+        font-size: 1rem; /* Ajusta según tu diseño */
+        line-height: 1.6; /* Mejora la legibilidad */
+        color: #333; /* Color neutro para facilitar la lectura */
+    
+    
+}
+
+.card:hover {
+    transform: scale(1.05); /* Efecte de zoom */
+}
+
+/* Botó estilitzat */
+.button {
+    display: inline-block;
+    background: #b8b4af;
+    color: #4B4B4B;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    text-align: center;
+    transition: background 0.3s;
+    margin: 50px;
+}
+
+.button:hover {
+    background: #659db9;
+}
+
+/* Responsivitat */
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 20px); /* 2 columnes a pantalles mitjanes */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%; /* 1 columna a pantalles petites */
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
